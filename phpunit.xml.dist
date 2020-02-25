@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+		 backupGlobals="false"
+		 backupStaticAttributes="false"
+		 colors="true"
+		 verbose="true"
+		 convertErrorsToExceptions="true"
+		 convertNoticesToExceptions="true"
+		 convertWarningsToExceptions="true"
+		 processIsolation="false"
+		 stopOnFailure="false">
+	<testsuites>
+		<testsuite name="Test Suite">
+			<directory>tests</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">lib/</directory>
+		</whitelist>
+	</filter>
+	<php>
+		<env name="DB_CONNECTION" value="testing"/>
+        <env name="ALGOLIA_PREFIX" value="ld_phpunit_" />
+        <env name="ALGOLIA_APP_ID" value=""/>
+        <env name="ALGOLIA_API_KEY" value=""/>
+	</php>
+</phpunit>

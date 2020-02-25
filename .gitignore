@@ -1,0 +1,14 @@
+/vendor/
+symfony/tests/cache/
+/composer.lock
+.php_cs.cache
+/var/
+.idea
+clover.xml
+/tests/coverage
+symfony/tests/QualityTools/vendor/
+symfony/tests/QualityTools/.idea/
+symfony/tests/QualityTools/composer.lock
+phpunit.xml.sym
+phpunit.xml
+.phpunit.result.cache

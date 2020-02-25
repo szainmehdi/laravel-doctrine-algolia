@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  php:
+    image: szainmehdi/php:7.4
+    working_dir: /var/www
+    environment:
+      - APP_ENV=testing
+      - XDEBUG_ENABLE=true
+      - XDEBUG_REMOTE_PORT=9001
+      - XDEBUG_IDE_KEY=PHPSTORM
+      - XDEBUG_REMOTE_HOST=host.docker.internal
+    volumes:
+      - .:/var/www
+    ports:
+      - "9000:9000"
